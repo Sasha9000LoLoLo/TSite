@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт с футболками</title>
+    <link rel="stylesheet" type="text/CSS" href="../CSS/style2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
+    <script>new WOW().init();</script>
+</head>
+
+<body onload="prTime()">
+    <header>
+
+        <div class="basket" onclick="show_korz_modal()">
+            <img src="../img/Магазин футболок/Корзина.png" width="50px" height="50px">
+        </div>
+
+        <div class="centered">
+
+            <div class="text_top">
+                <font size="5" style="font-weight:bolder; font-family: 'Raleway', sans-serif; font-weight: 900;">ФУТБОЛКИ С ПРИНТАМИ</font>
+                <br>
+
+                <font size="7" color="red" class="colored"><b>499
+                        <sup>
+                            <font size="5" class="colored">руб.</b></font>
+                </sup>
+                </font>
+            </div>
+        </div>
+
+        <center>
+            <div class="price">
+                ПОЧЕМУ ТАК ДЁШЕВО?
+            </div>
+        </center>
+        <br>
+
+        <div class="image_cr">
+
+            <div class="cr">
+                <a href="../img/Магазин футболок/price.png" class="lightzoom"><img src="../img/Магазин футболок/price.png" width="200px" height="140px"></a>
+                <br>
+                <font size="3">Низкие цены</font>
+            </div>
+
+            <div class="cr">
+                <a href="../img/Магазин футболок/gruzovik.png" class="lightzoom"><img src="../img/Магазин футболок/gruzovik.png" width="160px" height="140px"></a>
+                <br>
+                <font size="3">Доставка по всей России</font>
+            </div>
+
+            <div class="cr">
+                <a href="../img/Магазин футболок/hit.png" class="lightzoom"><img src="../img/Магазин футболок/hit.png" width="140px" height="140px"></a>
+                <br>
+                <font size="3">Только хиты</font>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- <script>
+        cupons = ['25₽', '32₽', '40₽', '50₽', '65₽', '80₽', '100₽', '125₽', '155₽', '190₽', '230₽', '275₽', '325₽', '380₽', '440₽', 'Бесплатная футболка'];
+        cuponsText = 'Выпадающие из подарка призы:' + '\n';
+        cupons.forEach(element => {
+            cuponsText = cuponsText + ' • ' + element + '\n';
+        });
+    </script> -->
+
+    <img class="animate__animated animate__pulse animate__infinite tp" src="../img/Магазин футболок/Техподдержка.png"
+        class="tp" onclick="print_contact()">
+
+    <div class="present" id="present_div">
+        <div id="present_box">
+            <img src="../img/Магазин футболок/Подарок.png" width="140px" height="100px" id="present" onclick="show_modal_present()">
+        </div>
+        <center>
+            <button class="present_button" id="present_button"
+                onclick="show_modal_present_b()"
+                onmouseover="animation()"
+                >
+                Забрать подарок
+            </button>
+            <p id="timeP"></p>
+        </center>
+    </div>
+
+    <main style="margin-top:330px">
+        <section class="centered">
+            <div class="text_top anima">
+                <font size="6"><b>ФУТБОЛКИ</b></font>
+                <br>
+                <font size="3">100% хлопок</font>
+            </div>
+            <div class="all">
+
+                <div class="strelka">
+                    <img src="../img/Магазин футболок/left.PNG" width="50px" height="50px" onclick="rand_tshirt()">
+                </div>
+
+                <div class="tshirt_1">
+                    <a href="../img/Магазин футболок/Чёрная футболка.png" target="_blank">
+                        <img src="../img/Магазин футболок/Чёрная футболка.png" id="ts_1" width="550px" height="600px">
+                    </a>
+                    <br>
+                    <font size="3"><b>Футболка</b></font>
+                    <br>
+                    <font size="4" color="red"><b>499 Р</b></font>
+                    <br>
+                    <br>
+                    <button class="create_button" onclick="addTShirts('black')" id="b1"
+                    onmouseover="b_style(1)" onmouseleave="b_style(1)">ДОБАВИТЬ В ЗАКАЗ</button>
+
+                </div>
+
+                <div class="tshirt_1">
+                    <a href="../img/Магазин футболок/Белая футболка.png" target="_blank">
+                        <img src="../img/Магазин футболок/Белая футболка.png" id="ts_2" width="550px" height="600px">
+                    </a>
+                    <br>
+                    <font size="3"><b>Футболка</b></font>
+                    <br>
+                    <font size="4" color="red"><b>499 Р</b></font>
+                    <br>
+                    <br>
+                    <button class="create_button" onclick="addTShirts('white')" id="b2"
+                    onmouseover="b_style(2)" onmouseleave="b_style(2)">ДОБАВИТЬ В ЗАКАЗ</button>
+                </div>
+
+                <div class="strelka">
+                    <img src="../img/Магазин футболок/right.PNG" width="50px" height="50px" onclick="rand_tshirt()">
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="ccr">
+                <font size="5">Как выбрать размер?</font>
+            </div>
+
+            <div class="shop">
+                <div class="tshirt_1">
+                    <a href="../img/Магазин футболок/Синяя футболка.png" target="_blank">
+                        <img src="../img/Магазин футболок/Синяя футболка.png">
+                    </a>
+                    <br>
+                    <font size="3"><b>Футболка</b></font>
+                    <br>
+                    <font size="4" color="red"><b>499 Р</b></font>
+                    <br>
+                    <br>
+                    <button class="create_button" onclick="addTShirts('blue')" id="b3"
+                    onmouseover="b_style(3)" onmouseleave="b_style(3)">ДОБАВИТЬ В ЗАКАЗ</button>
+                </div>
+
+                <div class="tshirt_1">
+                    <a href="../img/Магазин футболок/Синяя футболка.png" target="_blank">
+                        <img src="../img/Магазин футболок/Синяя футболка.png">
+                    </a>
+                    <br>
+                    <font size="3"><b>Футболка</b></font>
+                    <br>
+                    <font size="4" color="red"><b>499 Р</b></font>
+                    <br>
+                    <br>
+                    <button class="create_button" onclick="addTShirts('blue')" id="b4"
+                    onmouseover="b_style(4)" onmouseleave="b_style(4)">ДОБАВИТЬ В ЗАКАЗ</button>
+                </div>
+
+                <div class="tshirt_1">
+                    <a href="../img/Магазин футболок/Синяя футболка.png" target="_blank">
+                        <img src="../img/Магазин футболок/Синяя футболка.png">
+                    </a>
+                    <br>
+                    <font size="3"><b>Футболка</b></font>
+                    <br>
+                    <font size="4" color="red"><b>499 Р</b></font>
+                    <br>
+                    <br>
+                    <button class="create_button" onclick="addTShirts('blue')" id="b5"
+                    onmouseover="b_style(5)" onmouseleave="b_style(5)">ДОБАВИТЬ В ЗАКАЗ</button>
+                </div>
+            </div>
+
+            <div class="shop">
+                <div class="tshirt_1">
+                    <a href="../img/Магазин футболок/Синяя футболка.png" target="_blank">
+                        <img src="../img/Магазин футболок/Синяя футболка.png">
+                    </a>
+                    <br>
+                    <font size="3"><b>Футболка</b></font>
+                    <br>
+                    <font size="4" color="red"><b>499 Р</b></font>
+                    <br>
+                    <br>
+                    <button class="create_button" onclick="addTShirts('blue')" id="b6"
+                    onmouseover="b_style(6)" onmouseleave="b_style(6)">ДОБАВИТЬ В ЗАКАЗ</button>
+                </div>
+
+                <div class="tshirt_1">
+                    <a href="../img/Магазин футболок/Синяя футболка.png" target="_blank">
+                        <img src="../img/Магазин футболок/Синяя футболка.png">
+                    </a>
+                    <br>
+                    <font size="3"><b>Футболка</b></font>
+                    <br>
+                    <font size="4" color="red"><b>499 Р</b></font>
+                    <br>
+                    <br>
+                    <button class="create_button" onclick="addTShirts('blue')" id="b7"
+                    onmouseover="b_style(7)" onmouseleave="b_style(7)">ДОБАВИТЬ В ЗАКАЗ</button>
+                </div>
+
+                <div class="tshirt_1">
+                    <a href="../img/Магазин футболок/Синяя футболка.png" target="_blank">
+                        <img src="../img/Магазин футболок/Синяя футболка.png">
+                    </a>
+                    <br>
+                    <font size="3"><b>Футболка</b></font>
+                    <br>
+                    <font size="4" color="red"><b>499 Р</b></font>
+                    <br>
+                    <br>
+                    <button class="create_button" onclick="addTShirts('blue')" id="b8"
+                     onmouseover="b_style(8)" onmouseleave="b_style(8)">ДОБАВИТЬ В ЗАКАЗ</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cupon">
+
+            <div class="spirit">
+
+                <div class="rozygrish">
+                    <font size="7" color="white">РОЗЫГРЫШ</font>
+                    <br>
+                    <font size="7" color="white"><b>10000<sup> руб.</sup></b></font>
+                    <br>
+                    <font size="6" color="yellow"><b>СРЕДИ ОБЛАДАТЕЛЕЙ
+                            <br>
+                            КУПОНОВ</b></font>
+                    <br>
+                    <font size="6" color="white">Вечером 1 июля команда разыграет приз в прямом эфире на аккаунте
+                        @tadadadam.ru</font>
+                </div>
+
+                <div class="money">
+                    <img src="../img/Магазин футболок/Деньги.jpg" alt="Деньги" height="240px" width="240px">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="zakaz">
+
+            <div class="wow animate__animated animate__slideInLeft">
+                <font size="7"><b style="font-family: 'Roboto Slab', sans-serif">ВАШ ЗАКАЗ</b></font>
+            </div>
+
+            <div class="yellow">
+                <h3 id="korzBTS"></h3>
+                <h3 id="korzBlkTS"></h3>
+                <h3 id="korzWTS"></h3>
+                <h3 id="korzATS"></h3>
+                <h3 id="korzCTS"></h3>
+            </div>
+
+            <div>
+                <font color="grey" id="krz" style="font-family: 'Jost', sans-serif">В корзине пусто!</font>
+            </div>
+
+        </section>
+
+        <section class="forma">
+
+            <form action="/action_page.php" class="form-container">
+
+                <h1>Оформление заказа</h1>
+
+                <label>
+                    <b>Имя</b>
+                    <br>
+                </label>
+                <input type="text" id="input_name" class="input_text" placeholder="Имя" required>
+                <br>
+                <label>
+                    <b>Фамилия</b>
+                    <br>
+                </label>
+                <input type="text" id="input_fam" class="input_text" placeholder="Фамилия" required>
+                <br>
+                <label>
+                    <b>Почта</b>
+                    <br>
+                </label>
+                <input type="text" id="input_mail" class="input_text" placeholder="Введите почту" required>
+                <br>
+                <label>
+                    <b>Телефон</b>
+                    <br>
+                </label>
+                <input type="text" id="input_phone" class="input_text" placeholder="Номер телефона" required>
+                <br>
+                <font color="green">Оплата онлайн</font>
+                <hr>
+                <center>
+                    <button onclick="valid_form()" class="forma_button" id="button_form">
+                        Перейти к заказу
+                    </button>
+                </center>
+                <br>
+                <span id="sp"></span>
+
+            </form>
+
+        </section>
+
+        <section>
+
+            <div class="otz" onmouseleave="star_2()">
+                <img src="../img/Магазин футболок/star_2.png" width="75px" id="star_f_1" onmouseenter="show_star(1)" onclick="txt(1)">
+                <img src="../img/Магазин футболок/star_2.png" width="75px" id="star_f_2" onmouseenter="show_star(2)" onclick="txt(2)">
+                <img src="../img/Магазин футболок/star_2.png" width="75px" id="star_f_3" onmouseenter="show_star(3)" onclick="txt(3)">
+                <img src="../img/Магазин футболок/star_2.png" width="75px" id="star_f_4" onmouseenter="show_star(4)" onclick="txt(4)">
+                <img src="../img/Магазин футболок/star_2.png" width="75px" id="star_f_5" onmouseenter="show_star(5)" onclick="txt(5)">
+            </div>
+
+            <div>
+                <center>
+                    <font size="4" style="font-family: 'Raleway', sans-serif;">Оставьте оценку сайту!</font>
+                </center>
+            </div>
+
+        </section>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="header">
+                    <span class="close" onclick="close_modal()">&times;</span>
+                    <h2>Информация о доставке</h2>
+                </div>
+                <div class="body">
+                    <p>Доставка круглосуточная в пределах МКАД</p>
+                    <p>Минимальный заказ – 499р.</p>
+                    <br>
+                    <p style="font-family: 'Jost', sans-serif;">Телефон службы доставки: 888888888</p>
+                </div>
+                <div class="footer">
+                    <p style="font-family: 'Jost', sans-serif;">Телефон поддержки: 8 999 333 22 11</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal_present" class="modal">
+            <div class="modal-content" style="border: 3px solid #1E90FF">
+                <div class="header_p">
+                    <span class="close" onclick="close_modal_present()">&times;</span>
+                    <h2>Информация о подарке</h2>
+                </div>
+                <div class="body_p">
+                   <p id="spisok"></p>
+                </div>
+                <div class="footer_p">
+                    <p style="font-size:15px; color:#158815">Шанс до 25% на купон без ограничения по времени использования!</p>
+                    <p style="font-family: 'Jost', sans-serif;">Телефон поддержки: 8 999 333 22 11</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal_present_button" class="modal">
+            <div class="modal-content" style="border: 2px solid #FF8C00">
+                <div class="header_p_b">
+                    <span class="close" onclick="close_modal_present_b()">&times;</span>
+                    <h2>Открытие подарка</h2>
+                </div>
+                <div class="body_p_b">
+                    <p id="get" style="font-family: 'Jost', sans-serif;">Из подарка вам выпало:</p>
+                    <p id="priz" style="font-family: 'Rubik Bubbles', sans-serif;"></p>
+                </div>
+                <div class="footer_p_b">
+                    <p style="font-family: 'Jost', sans-serif;">Телефон поддержки: 8 999 333 22 11</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="korzModal" class="modal">
+            <div class="modal-content" style="border: 5px ridge #83b2ad;">
+                <div class="all_k">
+                    <div class="header_k">
+                        <span class="close" onclick="close_korz_modal()">&times;</span>
+                        <h2>Ваш заказ:</h2>
+                    </div>
+                    <div class="body_k">
+                        <div style="color: #eeeeee">Синих футболок в заказе: <p id="bTS" style="font-family: 'Rubik Bubbles', sans-serif;"></p> шт.</div>
+                        <div style="color: #8d8d8d">Чёрных футболок в заказе: <p id="blkTS" style="font-family: 'Rubik Bubbles', sans-serif;"></p> шт.</div>
+                        <div style="color: #2a2a2a">Белых футболок в заказе: <p id="wTS" style="font-family: 'Rubik Bubbles', sans-serif;"></p> шт.</div>
+                        <div style="color: #8d8d8d">Всего футболок в заказе: <p id="allTS" style="font-family: 'Rubik Bubbles', sans-serif;"></p> шт.</div>
+                        <div style="color: #eeeeee">Общая стоимость всех футболок: <p id="costAllTS" style="font-family: 'Rubik Bubbles', sans-serif;"></p> ₽.</div>
+                    </div>
+                    <div class="footer_k">
+                        <p id="cupT"></p>
+                        <p id="cupInf"></p>
+                        <p style="font-family: 'Jost', sans-serif; font-size: 12px;">Телефон поддержки: 8 999 333 22 11</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top:50px">
+            <center>
+                <font size="3" onclick="show_modal()" class="delivery"><u>Условия доставки</u></font>
+            </center>
+        </div>
+
+    </main>
+
+    <script>
+        button_form.onmouseover = function (event) {
+            let target = event.target;
+            target.style.background = 'radial-gradient(farthest-corner at 50% 50%, #32CD32, #228B22)';
+            target.style.color = '#FFE4B5';
+            target.style.boxShadow = '1px 1px 3px 1px #151515';
+            target.style.borderRadius = '10px';
+            target.style.cursor = 'pointer';
+            target.style.borderColor = 'lavender';
+        };
+
+        button_form.onmouseout = function (event) {
+            let target = event.target;
+            target.style.background = '';
+            target.style.color = '';
+            target.style.boxShadow = '';
+            target.style.borderRadius = '';
+            target.style.borderColor = '';
+        };
+
+        tp.onmouseover = function (event) {
+            let target = event.target;
+            target.style.background = 'radial-gradient(farthest-corner at 50% 50%, #32CD32, #228B22)';
+            target.style.boxShadow = '2px 4px 6px 1px #0F2F2F';
+            target.style.border = '5px solid';
+            target.style.borderRadius = '65px';
+            target.style.cursor = 'pointer';
+            target.style.borderColor = '#ff0000';
+            target.style.opacity = '1';
+        };
+
+        tp.onmouseout = function (event) {
+            let target = event.target;
+            target.style.background = '';
+            target.style.border = '';
+            target.style.boxShadow = '';
+            target.style.borderRadius = '';
+            target.style.borderColor = '';
+            target.style.opacity = '';
+        };
+
+        present_button.onmouseover = function (event) {
+            let target = event.target;
+            target.style.background = 'linear-gradient(#B8860B, #DAA520)';
+            target.style.boxShadow = '2px 4px 6px 1px #0F2F2F';
+            target.style.border = '2px solid #8B4513';
+            target.style.borderRadius = '10px';
+            target.style.cursor = 'pointer';
+            target.className = 'animate__animated animate__bounceIn animate__repeat-1 present_button'
+        };
+
+        present_button.onmouseout = function (event) {
+            let target = event.target;
+            target.style.background = '';
+            target.style.border = '';
+            target.style.boxShadow = '';
+            target.style.borderRadius = '';
+            target.className = 'present_button'
+        };
+
+        present.onmouseover = function (event) {
+            let target = event.target;
+            target.className = 'animate__animated animate__repeat-1 animate__swing';
+        };
+
+        present.onmouseout = function (event) {
+            let target = event.target;
+            target.className = '';
+        };
+
+        present_box.onmouseover = function (event) {
+            let target = event.target;
+            target.style.background = 'linear-gradient(0.25turn, #B8860B, #CD853F, #DAA520)';
+            target.style.boxShadow = '2px 4px 6px 1px #0F2F2F';
+            target.style.border = '2px solid #D2691E';
+            target.style.borderRadius = '7px';
+            target.style.cursor = 'pointer';
+        }
+
+        present_box.onmouseout = function (event) {
+            let target = event.target;
+            target.style.background = '';
+            target.style.border = '';
+            target.style.boxShadow = '';
+            target.style.borderRadius = '';
+        }
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+    </script>
+
+    <script src="../JS/js2.js"></script>
+
+    <link rel="stylesheet" href="../lightzoom/style.css" type="text/css">
+    <script type="text/javascript" src="../lightzoom/lightzoom.js"></script>
+    <script type="text/javascript">jQuery('.lightzoom').lightzoom({speed: 400, 
+    viewTitle: true, 
+    isWindowClickClosing: true, 
+    isEscClosing: true
+    });</script>
+
+</body>
+
+</html>
