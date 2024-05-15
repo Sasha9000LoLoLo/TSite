@@ -1,0 +1,412 @@
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: yellow;
+    padding-top: 10px;
+}
+
+.basket {
+    position: fixed;
+    z-index: 1;
+    top: 10px;
+    right: 10px;
+}
+
+.colored {
+    animation-name: colorsA;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+}
+
+@keyframes colorsA {
+
+    0% {
+        color: #ff0000;
+    }
+
+    10% {
+        color: #FFA500;
+    }
+
+    20% {
+        color: #FFFF00;
+    }
+
+    30% {
+        color: #00FF00;
+    }
+
+    40% {
+        color: #008000;
+    }
+
+    50% {
+        color: #40E0D0;
+    }
+
+    60% {
+        color: #4682B4;
+    }
+
+    70% {
+        color: #0000FF;
+    }
+
+    80% {
+        color: #191970;
+    }
+
+    90% {
+        color: #000000;
+    }
+
+    100% {
+        color: #800000;
+    }
+
+}
+
+.price {
+    color: white;
+    background-color: red;
+    max-width: 240px;
+    font-size: 20px;
+    animation-name: price;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 0s;
+}
+
+@keyframes price {
+
+    0% {
+        background-color: #ff0000;
+        max-width: 240px;
+    }
+
+    50% {
+        background: linear-gradient(0.5turn, #3f87a6, #ebf8e1, #f69d3c);
+        color: #494949;
+        border-radius: 15px;
+        font-size: 22px;
+        max-width: 280px;
+    }
+
+    100% {
+        background-color: #ff0000;
+        max-width: 240px;
+    }
+
+}
+
+.image_cr {
+    text-align: center;
+}
+
+.cr {
+    margin: 0px 100px;
+}
+
+.anima {
+    animation-name: round;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 0s;
+}
+
+@keyframes round {
+
+    0% {
+        margin-left: -85%;
+        color: #ff0000;
+    }
+
+    50% {
+        color: #008000;
+    }
+
+    100% {
+        margin-left: 85%;
+        color: #0000ff;
+    }
+
+}
+
+.centered {
+    position: relative;
+}
+
+.tshirt_1 {
+    margin: 30px 20px;
+    line-height: 1.3;
+    display: block;
+    font-weight: 600;
+}
+
+.ccr {
+    background-color: #f7f7f7;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.spirit {
+    justify-content: space-between;
+    background-color: #e42424;
+    padding-left: 20px;
+    box-shadow: 10px 7px 30px 5px #000000;
+}
+
+.money {
+    padding: 10px;
+}
+
+.zakaz {
+    margin-left: 45px;
+    margin-top: 50px;
+}
+
+.yellow {
+    background-color: #f0f000;
+}
+
+.korz {
+    padding: 20px;
+}
+
+.forma_button {
+    background-color: #008000;
+    color: #ffffed;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #6f6f6f;
+    border-width: 3px;
+    font-size: 18px;
+    font-weight: bolder;
+    margin: 10px 0px;
+}
+
+.otz {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+hr {
+    box-shadow: 2px 2px 5px 0.5px #000000;
+    height: 0px;
+    border: 0px;
+    margin-bottom: 20px;
+}
+
+.tp {
+    position: fixed;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    right: 70px;
+    bottom: 70px;
+    opacity: 0.75;
+}
+
+.present {
+    position: fixed;
+    z-index: 1;
+    left: 5px;
+    top: 25px;
+}
+
+.present_button {
+    background: linear-gradient(#DAA520, #DCC742);
+    border: 1px solid #8B4513;
+    border-radius: 5px;
+    color: #000055;
+    padding: 7px;
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #FEFEFE;
+    margin: 15% auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 7px 0 rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+.close {
+    font-weight: bold;
+    color: black;
+    float: right;
+    font-size: 28px;
+}
+
+.close:hover {
+    color: #3e5c7a;
+    cursor: pointer;
+}
+
+.delivery:hover {
+    cursor: pointer;
+}
+
+.header {
+    padding: 3px 15px;
+    background-color: #008000;
+    color: white;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.body {
+    padding: 3px 15px;
+}
+
+.footer {
+    padding: 3px 15px;
+    background-color: #008000;
+    color: white;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.animate__animated.animate__swing, .animate__animated.animate__pulse {
+    --animate-duration: 1s;
+}
+
+.animate__animated.animate__bounceIn {
+    --animate-duration: 2.5s;
+}
+
+.input_text {
+    background-color: #f1f1f1;
+    border: 0px solid;
+    box-shadow: 2px 1px 5px 0.5px #000000;
+    padding: 12px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.create_button {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 5px 12px;
+    border-color: #7e7e7e;
+}
+
+/* .create_button:hover {
+    cursor: pointer;
+    background: radial-gradient(farthest-corner at 50% 50%, #ff4400, #ff2200);
+    border-color: #abcde0;
+    border-radius: 7px;
+    color: #ffeedd;
+    text-shadow: 1px 1px 1px #151515;
+    box-shadow: 1px 2px 3px #111111;
+} */
+
+.tshirt_1 img {
+    border: 3px solid #9d9d9d;
+}
+
+.tshirt_1 img:hover {
+    cursor: pointer;
+    border-color: #111111;
+    animation: anima_1 777ms 1 linear;
+}
+
+@keyframes anima_1 {
+
+    0% {
+        box-shadow: 2px 2px 6px #111111;
+    }
+
+    10% {
+        box-shadow: 2px 2px 5px #111111;
+    }
+
+    20% {
+        box-shadow: 2px 2px 4px #111111;
+    }
+
+    30% {
+        box-shadow: 2px 2px 3px #111111;
+    }
+
+    40% {
+        box-shadow: 2px 1px 3px #111111;
+    }
+
+    50% {
+        box-shadow: 1px 1px 3px #111111;
+    }
+
+    60% {
+        box-shadow: 1px 1px 2px #111111;
+    }
+
+    70% {
+        box-shadow: 1px 1px 1px #111111;
+    }
+
+    80% {
+        box-shadow: 1px 1px 0px #111111;
+    }
+
+    90% {
+        text-shadow: 1px 0px 0px #111111;
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px #111111;
+    }
+
+}
+
+.image_cr,
+.all,
+.shop, .spirit, .forma {
+    display: flex;
+}
+
+.image_cr,
+.all,
+.shop, .forma {
+    justify-content: center;
+}
+
+.centered,
+.shop {
+    text-align: center;
+}
+
+.all_k {
+    background: linear-gradient(0.22turn, #101010, #051142, #234567);
+}
+
+.body_k {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 25px;
+}
+
+.
