@@ -264,14 +264,14 @@ function show_star(k) {
     for (let i = 0; i <= k; i++) {
       b = ids[i];
       a = document.getElementById(b);
-      a.src = "img/Магазин футболок/star_1.png";
+      a.src = "Магазин футболок/star_1.png";
     }
   } else {
     for (let i = 0; i < ids.length; i++) {
       if (i > k) {
         b = ids[i];
         a = document.getElementById(b);
-        a.src = "img/Магазин футболок/star_2.png";
+        a.src = "Магазин футболок/star_2.png";
       }
     }
   }
@@ -283,7 +283,7 @@ function star_2() {
   for (let i = 0; i < ids.length; i++) {
     b = ids[i];
     a = document.getElementById(b);
-    a.src = "img/Магазин футболок/star_2.png";
+    a.src = "Магазин футболок/star_2.png";
   }
 }
 
@@ -308,12 +308,12 @@ function valid_form() {
 
 function rand_tshirt() {
   var arr = [
-    "img/Магазин футболок/1.jpg",
-    "img/Магазин футболок/2.jpg",
-    "img/Магазин футболок/3.jpg",
-    "img/Магазин футболок/4.jpg",
-    "img/Магазин футболок/Чёрная футболка.png",
-    "img/Магазин футболок/Белая футболка.png",
+    "Магазин футболок/1.jpg",
+    "Магазин футболок/2.jpg",
+    "Магазин футболок/3.jpg",
+    "Магазин футболок/4.jpg",
+    "Магазин футболок/Чёрная футболка.png",
+    "Магазин футболок/Белая футболка.png",
   ];
   var id_img = ["ts_1", "ts_2"];
 
